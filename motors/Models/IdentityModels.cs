@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using motors.Models.Cars;
 
 namespace motors.Models
 {
@@ -31,5 +32,10 @@ namespace motors.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Car> Cars { get; set; }
+        public DbSet<CarPictures> Pictures { get; set; }
+        public DbSet<CarApplication> Applications { get; set; }
+        public DbSet<Contactdealer> Contactdealer { get; set; }
     }
 }
